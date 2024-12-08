@@ -6,6 +6,10 @@
   "contributes": {
     "snippets": [
       {
+        "language": "nix",
+        "path": "./snippets/nix.json"
+      }
+      {
         "language": ["typst"],
         "path": "./snippets/typst.json"
       },
