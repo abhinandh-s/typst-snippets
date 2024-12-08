@@ -1,0 +1,58 @@
+{
+  "name": "just-snippets",
+  "engines": {
+    "vscode": "^1.11.0"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "plaintext",
+          "markdown",
+          "tex",
+          "html",
+          "global",
+          "all"
+        ],
+        "path": "./snippets/global.json"
+      },
+      {
+        "language": ["typst"],
+        "path": "./snippets/typst.json"
+      },
+      {
+        "language": ["license"],
+        "path": "./snippets/license.json"
+      },
+      {
+        "language": "nix",
+        "path": "./snippets/nix.json"
+      },
+      {
+        "language": "rust",
+        "path": "./snippets/rust/rust.json"
+      },
+      {
+        "language": "rustdoc",
+        "path": "./snippets/rust/rustdoc.json"
+      },
+      {
+        "language": ["markdown"],
+        "path": "./snippets/markdown.json"
+      },
+      {
+        "language": "org",
+        "path": "./snippets/org.json"
+      },
+      {
+        "language": "yaml",
+        "path": "./snippets/kubernetes.json"
+      },
+      {
+        "language": "loremipsum",
+        "path": "./snippets/loremipsum.json"
+      },
+    ]
+  }
+}
+
