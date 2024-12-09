@@ -118,6 +118,71 @@ local function generate_lable()
   )
 end
 
+local function generate_reference()
+  local items = {}
+  table.insert(items, t("@"))
+  table.insert(items, i(0))
+  return s({
+      trig = "reference",
+      snippetType = "snippet",
+      desc = "Reference",
+      wordTrig = true
+    },
+    items
+  )
+end
+
+local function generate_link()
+  local items = {}
+  table.insert(items, t("#link("))
+  table.insert(items, i(0))
+  table.insert(items, t(")["))
+  table.insert(items, i(1))
+  table.insert(items, t("]"))
+  return s({
+      trig = "link",
+      snippetType = "snippet",
+      desc = "Add links",
+      wordTrig = true
+    },
+    items
+  )
+end
+
+local function generate_internal_link()
+  local items = {}
+  table.insert(items, t("#link(("))
+  table.insert(items, i(0))
+  table.insert(items, t("page: 1, x: 0pt, y: 0pt}))["))
+  table.insert(items, i(1))
+  table.insert(items, t("]"))
+  return s({
+      trig = "link_internal",
+      snippetType = "snippet",
+      desc = "Add internal links",
+      wordTrig = true
+    },
+    items
+  )
+end
+
+local function generate_lable_links()
+  local items = {}
+  table.insert(items, t("#link(<"))
+  table.insert(items, i(0))
+  table.insert(items, t(">)["))
+  table.insert(items, i(1))
+  table.insert(items, t("]"))
+  return s({
+      trig = "link_label",
+      snippetType = "snippet",
+      desc = "Add lable links",
+      wordTrig = true
+    },
+    items
+  )
+end
+
 local markup_snippets = {}
 markup_snippets.snippets = {}
 
@@ -137,5 +202,9 @@ table.insert(markup_snippets.snippets, generate_strong_emphasis())
 table.insert(markup_snippets.snippets, generate_emphasis())
 table.insert(markup_snippets.snippets, generate_raw_text())
 table.insert(markup_snippets.snippets, generate_lable())
+table.insert(markup_snippets.snippets, generate_reference())
+table.insert(markup_snippets.snippets, generate_link())
+table.insert(markup_snippets.snippets, generate_internal_link())
+table.insert(markup_snippets.snippets, generate_lable_links())
 
 return markup_snippets
