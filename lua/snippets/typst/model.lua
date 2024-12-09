@@ -35,6 +35,44 @@ model_snippets.snippets = {
       t("),")
     }
   ),
+  s({
+      trig = "img",
+      snippetType = "snippet",
+      desc = "Add images",
+      wordTrig = true
+    },
+    {
+      t("#image(\""),
+      i(0, "image.png"),
+      t("\", width: 80%"),
+      t("),")
+    }
+  ),
+  s({
+      trig = "img_figure",
+      snippetType = "snippet",
+      desc = "Add images as figure",
+      wordTrig = true
+    },
+    {
+      t("#figure("),
+      t({ "", "\t" }),
+      t("image(\""),
+      t({ "", "\t" }),
+      i(0, "image.png"),
+      t({ "", "\t" }),
+      t("\", width: 80%"),
+      t({ "", "\t" }),
+      t("),"),
+      t("caption: ["),
+      t({ "", "\t" }),
+      i(0, "caption"),
+      t({ "", "\t" }),
+      t("]"),
+      t({ "", "\t" }),
+      t("),")
+    }
+  ),
 }
 
 return model_snippets

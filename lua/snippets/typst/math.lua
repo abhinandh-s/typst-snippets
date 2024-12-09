@@ -8,6 +8,18 @@ local maths_snippets = {}
 
 maths_snippets.snippets = {
   s({
+      trig = "maths",
+      snippetType = "snippet",
+      desc = "maths block",
+      wordTrig = true
+    },
+    {
+      t("$ "),
+      i(0),
+      t(" $"),
+    }
+  ),
+  s({
       trig = "maths.cases",
       snippetType = "snippet",
       desc = "A case distinction.\nContent across different branches can be aligned with the & symbol.",
