@@ -15,7 +15,7 @@ M.setup = function()
   local sn = ls.snippet_node
 
 
-  local typst_snippets = require("just_snippets.typst")
+  local typst_snippets = require("snippets.typst")
   ls.add_snippets("typst", typst_snippets.model)
   ls.add_snippets("typst", typst_snippets.markup)
 
