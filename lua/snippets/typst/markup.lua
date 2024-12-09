@@ -25,7 +25,7 @@ local function generate_bullet_lists(level)
   table.insert(items, i(0))
   for lev = 2, level do
     table.insert(items, t({ "", "- " }))
-    table.insert(items, i(lev))
+    table.insert(items, i(lev - 1)) -- TEST: should be $0 $1 $2 $3
   end
 
   return s({
@@ -45,7 +45,7 @@ local function generate_numbered_lists(level)
   table.insert(items, i(0))
   for lev = 2, level do
     table.insert(items, t({ "", "+ " }))
-    table.insert(items, i(lev))
+    table.insert(items, i(lev)) -- TEST: this is like $0 $2 $3 $4
   end
 
   return s({
