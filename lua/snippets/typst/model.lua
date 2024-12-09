@@ -63,11 +63,11 @@ model_snippets.snippets = {
       t("),"),
       t({ "", "\t" }),
       t("caption: ["),
-      t({ "", "\t" }),
-      i(0, "caption"),
+      t({ "", "\t\t" }),
+      i(1, "caption"),
       t({ "", "\t" }),
       t("]"),
-      t({ "", "\t" }),
+      t({ "", "" }),
       t("),")
     }
   ),
