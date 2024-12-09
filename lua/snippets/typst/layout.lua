@@ -45,7 +45,39 @@ layout_snippets.snippets = {
       t("inset: 8pt,"),
       t({ "", "\t" }),
       t("radius: 4pt,"),
+      t({ "", "" }),
+      t(")["),
+      i(0),
+      t("]")
+    }
+  ),
+  s({
+      trig = "pagebreak",
+      snippetType = "snippet",
+      desc = "A manual page break.",
+      wordTrig = true
+    },
+    {
+      t("#pagebreak("),
       t({ "", "\t" }),
+      t("weak: false,"),
+      t({ "", "\t" }),
+      t("to: \"${0:odd}\","),
+      t({ "", "" }),
+      t(")"),
+    }
+  ),
+  s({
+      trig = "box",
+      snippetType = "snippet",
+      desc = "An inline-level container that sizes content.",
+      wordTrig = true
+    },
+    {
+      t("#box("),
+      t({ "", "\t" }),
+      t("inset: 4pt,"),
+      t({ "", "" }),
       t(")["),
       i(0),
       t("]")

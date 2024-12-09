@@ -19,6 +19,7 @@ M.setup = function()
   ls.add_snippets("typst", ts.model)
   ls.add_snippets("typst", ts.markup)
   ls.add_snippets("typst", ts.layout)
+  ls.add_snippets("typst", ts.math)
 
   -- Add your snippets here
   ls.add_snippets("lua", {
