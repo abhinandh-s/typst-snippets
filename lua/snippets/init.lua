@@ -11,9 +11,6 @@ M.setup = function()
   local fmt = require("luasnip.extras.fmt").fmt
   local c = ls.choice_node
   local f = ls.function_node
-  local d = ls.dynamic_node
-  local sn = ls.snippet_node
-
 
   local ts = require("snippets.typst")
   ls.add_snippets("typst", ts.model)
