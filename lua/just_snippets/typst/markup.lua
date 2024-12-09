@@ -19,22 +19,21 @@ local function generate_header_snippet(level)
 end
 
 local function generate_bullet_list_snippet(level)
-  -- Create a table to hold the list items
   local items = {}
 
   table.insert(items, t("- "))
-  -- Generate list items based on the level (i.e., the number of items)
+  table.insert(items, i(0))
   for lev = 2, level do
     table.insert(items, t({ "", "- " }))
-    table.insert(items, i(lev)) -- Insert a placeholder for the item
+    table.insert(items, i(lev))
   end
 
   return s({
-    trig = "ul" .. level, -- Trigger: ul1, ul2, ul3, etc.
-    snippetType = "snippet",
-    desc = "Unordered list with " .. level .. " items",
-    wordTrig = true
-  },
+      trig = "ul" .. level, -- Trigger: ul1, ul2, ul3, etc.
+      snippetType = "snippet",
+      desc = "Unordered list with " .. level .. " items",
+      wordTrig = true
+    },
     items
   )
 end
