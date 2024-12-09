@@ -22,13 +22,11 @@ local function generate_bullet_list_snippet(level)
   -- Create a table to hold the list items
   local items = {}
 
-  -- Add the first list item with only the bullet
-  table.insert(items, t({ "", "- " }))
-  table.insert(items, i(1)) -- Insert a placeholder for the first item
-  -- Generate the rest of the list items based on the level
+  table.insert(items, t("- "))
+  -- Generate list items based on the level (i.e., the number of items)
   for lev = 2, level do
     table.insert(items, t({ "", "- " }))
-    table.insert(items, i(lev)) -- Insert a placeholder for each subsequent item
+    table.insert(items, i(lev)) -- Insert a placeholder for the item
   end
 
   return s({
