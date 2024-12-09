@@ -13,8 +13,13 @@ M.setup = function()
     local f = ls.function_node
     local d = ls.dynamic_node
     local sn = ls.snippet_node
+ 
+  local typst_snippets = require("just_snippets.typst")
 
-    -- Add your snippets here
+    -- Add the Typst snippets to LuaSnip
+    ls.add_snippets("typst", typst_snippets.model)
+   
+  -- Add your snippets here
     ls.add_snippets("lua", {
         s("hello-abhi", {
             t('print("hello '),
