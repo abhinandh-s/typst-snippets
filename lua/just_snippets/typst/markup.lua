@@ -58,7 +58,66 @@ local function generate_numbered_lists(level)
   )
 end
 
--- Generate snippets for headers h1 to h7
+local function generate_strong_emphasis()
+  local items = {}
+  table.insert(items, t("*"))
+  table.insert(items, i(0))
+  table.insert(items, t("*"))
+  return s({
+      trig = "emp.s",
+      snippetType = "snippet",
+      desc = "Strong emphasis",
+      wordTrig = true
+    },
+    items
+  )
+end
+
+local function generate_emphasis()
+  local items = {}
+  table.insert(items, t("_"))
+  table.insert(items, i(0))
+  table.insert(items, t("_"))
+  return s({
+      trig = "emp",
+      snippetType = "snippet",
+      desc = "Emphasis",
+      wordTrig = true
+    },
+    items
+  )
+end
+
+local function generate_raw_text()
+  local items = {}
+  table.insert(items, t("`"))
+  table.insert(items, i(0))
+  table.insert(items, t("`"))
+  return s({
+      trig = "raw",
+      snippetType = "snippet",
+      desc = "Raw text",
+      wordTrig = true
+    },
+    items
+  )
+end
+
+local function generate_lable()
+  local items = {}
+  table.insert(items, t("<"))
+  table.insert(items, i(0))
+  table.insert(items, t(">"))
+  return s({
+      trig = "lable",
+      snippetType = "snippet",
+      desc = "Label",
+      wordTrig = true
+    },
+    items
+  )
+end
+
 local markup_snippets = {}
 markup_snippets.snippets = {}
 
@@ -73,5 +132,10 @@ end
 for level = 1, 7 do
   table.insert(markup_snippets.snippets, generate_numbered_lists(level))
 end
+
+table.insert(markup_snippets.snippets, generate_strong_emphasis())
+table.insert(markup_snippets.snippets, generate_emphasis())
+table.insert(markup_snippets.snippets, generate_raw_text())
+table.insert(markup_snippets.snippets, generate_lable())
 
 return markup_snippets
