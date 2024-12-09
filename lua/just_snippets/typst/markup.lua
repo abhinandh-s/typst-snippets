@@ -13,23 +13,28 @@ local function generate_header_snippet(level)
     },
     {
       t(string.rep("=", level) .. " "), -- Repeat "=" `level` times
-      i(1)  -- Insert node for the header text
+      i(1)                              -- Insert node for the header text
     }
   )
 end
 
-local function generate_bullet_list_snippet()
+local function generate_bullet_list_snippet(level)
+  -- Create a table to hold the list items
+  local items = {}
+
+  -- Generate list items based on the level (i.e., the number of items)
+  for lev = 1, level do
+    table.insert(items, t({ "", "- " }))
+    table.insert(items, i(lev)) -- Insert a placeholder for the item
+  end
+
   return s({
-      trig = "ul", -- Trigger for unordered list
-      snippetType = "snippet",
-      desc = "Unordered list",
-      wordTrig = true
-    },
-    {
-      t("- "), i(1), -- List item 1
-      t({ "", "- " }), i(2), -- List item 2
-      t({ "", "- " }), i(3)  -- List item 3
-    }
+    trig = "ul" .. level, -- Trigger: ul1, ul2, ul3, etc.
+    snippetType = "snippet",
+    desc = "Unordered list with " .. level .. " items",
+    wordTrig = true
+  },
+    items
   )
 end
 
@@ -41,6 +46,8 @@ for level = 1, 7 do
   table.insert(markup_snippets.snippets, generate_header_snippet(level))
 end
 
-table.insert(markup_snippets.snippets, generate_bullet_list_snippet())
+for level = 1, 7 do
+  table.insert(markup_snippets.snippets, generate_bullet_list_snippet(level))
+end
 
 return markup_snippets
