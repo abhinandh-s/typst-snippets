@@ -16,7 +16,7 @@ maths_snippets.snippets = {
     {
       t("$ f(x, y) := cases("),
       t({ "", "\t" }),
-      t("$1 \"if\" (x dot y)/2 <= 0,"),
+      t("1 \"if\" (x dot y)/2 <= 0,"),
       t({ "", "\t" }),
       t("2 \"if\" x \"is even\","),
       t({ "", "\t" }),
