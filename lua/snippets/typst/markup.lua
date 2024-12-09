@@ -183,6 +183,49 @@ local function generate_lable_links()
   )
 end
 
+local function generate_term_list()
+  local items = {}
+  table.insert(items, t("/ Term: "))
+  table.insert(items, i(0))
+  return s({
+      trig = "termlist",
+      snippetType = "snippet",
+      desc = "Add Term list",
+      wordTrig = true
+    },
+    items
+  )
+end
+
+local function generate_comment_line()
+  local items = {}
+  table.insert(items, t("// "))
+  table.insert(items, i(0))
+  return s({
+      trig = "commentl",
+      snippetType = "snippet",
+      desc = "Add Line Comment",
+      wordTrig = true
+    },
+    items
+  )
+end
+
+local function generate_comment_block()
+  local items = {}
+  table.insert(items, t("/* "))
+  table.insert(items, i(0))
+  table.insert(items, t(" */"))
+  return s({
+      trig = "commentb",
+      snippetType = "snippet",
+      desc = "Add Comment Block",
+      wordTrig = true
+    },
+    items
+  )
+end
+
 local markup_snippets = {}
 markup_snippets.snippets = {}
 
@@ -206,5 +249,8 @@ table.insert(markup_snippets.snippets, generate_reference())
 table.insert(markup_snippets.snippets, generate_link())
 table.insert(markup_snippets.snippets, generate_internal_link())
 table.insert(markup_snippets.snippets, generate_lable_links())
+table.insert(markup_snippets.snippets, generate_term_list())
+table.insert(markup_snippets.snippets, generate_comment_line())
+table.insert(markup_snippets.snippets, generate_comment_block())
 
 return markup_snippets
