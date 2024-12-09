@@ -4,7 +4,7 @@ local t = ls.text_node
 local i = ls.insert_node
 
 -- Helper function to generate header snippets
-local function generate_header_snippet(level)
+local function generate_headings(level)
   return s({
       trig = "h" .. level, -- Trigger: h1, h2, h3, etc.
       snippetType = "snippet",
@@ -18,7 +18,7 @@ local function generate_header_snippet(level)
   )
 end
 
-local function generate_bullet_list_snippet(level)
+local function generate_bullet_lists(level)
   local items = {}
 
   table.insert(items, t("- "))
@@ -29,7 +29,27 @@ local function generate_bullet_list_snippet(level)
   end
 
   return s({
-      trig = "ul" .. level, -- Trigger: ul1, ul2, ul3, etc.
+      trig = "list.b" .. level, -- Trigger: ul1, ul2, ul3, etc.
+      snippetType = "snippet",
+      desc = "Unordered list with " .. level .. " items",
+      wordTrig = true
+    },
+    items
+  )
+end
+
+local function generate_numbered_lists(level)
+  local items = {}
+
+  table.insert(items, t("+ "))
+  table.insert(items, i(0))
+  for lev = 2, level do
+    table.insert(items, t({ "", "+ " }))
+    table.insert(items, i(lev))
+  end
+
+  return s({
+      trig = "list.n" .. level, -- Trigger: ul1, ul2, ul3, etc.
       snippetType = "snippet",
       desc = "Unordered list with " .. level .. " items",
       wordTrig = true
@@ -43,11 +63,15 @@ local markup_snippets = {}
 markup_snippets.snippets = {}
 
 for level = 1, 7 do
-  table.insert(markup_snippets.snippets, generate_header_snippet(level))
+  table.insert(markup_snippets.snippets, generate_headings(level))
 end
 
 for level = 1, 7 do
-  table.insert(markup_snippets.snippets, generate_bullet_list_snippet(level))
+  table.insert(markup_snippets.snippets, generate_bullet_lists(level))
+end
+
+for level = 1, 7 do
+  table.insert(markup_snippets.snippets, generate_numbered_lists(level))
 end
 
 return markup_snippets
