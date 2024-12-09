@@ -15,10 +15,10 @@ M.setup = function()
   local sn = ls.snippet_node
 
 
-  local typst_snippets = require("snippets.typst")
-  ls.add_snippets("typst", typst_snippets.model)
-  ls.add_snippets("typst", typst_snippets.markup)
-  ls.add_snippets("typst", typst_snippets.layout)
+  local ts = require("snippets.typst")
+  ls.add_snippets("typst", ts.model)
+  ls.add_snippets("typst", ts.markup)
+  ls.add_snippets("typst", ts.layout)
 
   -- Add your snippets here
   ls.add_snippets("lua", {
