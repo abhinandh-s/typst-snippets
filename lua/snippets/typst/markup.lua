@@ -153,7 +153,7 @@ local function generate_internal_link()
   local items = {}
   table.insert(items, t("#link(("))
   table.insert(items, i(0))
-  table.insert(items, t("page: 1, x: 0pt, y: 0pt}))["))
+  table.insert(items, t("page: 1, x: 0pt, y: 0pt))["))
   table.insert(items, i(1))
   table.insert(items, t("]"))
   return s({
