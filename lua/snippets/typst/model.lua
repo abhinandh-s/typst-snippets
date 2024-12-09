@@ -36,6 +36,18 @@ model_snippets.snippets = {
     }
   ),
   s({
+      trig = "lorem",
+      snippetType = "snippet",
+      desc = "This function yields a Latin-like Lorem Ipsum blind text with the given number of words.",
+      wordTrig = true
+    },
+    {
+      t("#lorem("),
+      i(0, "num"),
+      t(")")
+    }
+  ),
+  s({
       trig = "img",
       snippetType = "snippet",
       desc = "Add images",
@@ -45,7 +57,7 @@ model_snippets.snippets = {
       t("#image(\""),
       i(0, "image.png"),
       t("\", width: 80%"),
-      t("),")
+      t(")")
     }
   ),
   s({
@@ -58,17 +70,56 @@ model_snippets.snippets = {
       t("#figure("),
       t({ "", "\t" }),
       t("image(\""),
-      i(0, "image.png"),
+      i(1, "image.png"),
       t("\", width: 80%"),
       t("),"),
       t({ "", "\t" }),
       t("caption: ["),
       t({ "", "\t\t" }),
-      i(1, "caption"),
+      i(0, "caption"),
       t({ "", "\t" }),
       t("]"),
       t({ "", "" }),
       t("),")
+    }
+  ),
+  s({
+      trig = "highlight",
+      snippetType = "snippet",
+      desc = "Add highlight",
+      wordTrig = true
+    },
+    {
+      t("#highlight["),
+      i(0, "important test"),
+      t("]")
+    }
+  ),
+  s({
+      trig = "highlight_extra",
+      snippetType = "snippet",
+      desc = "Add highlight with full options",
+      wordTrig = true
+    },
+    {
+      t("#highlight("),
+      t({ "", "\t" }),
+      t("fill: blue,"),
+      t({ "", "\t" }),
+      t("stroke: fuchsia,"),
+      t({ "", "\t" }),
+      t("extent: 4pt,"),
+      t({ "", "\t" }),
+      t("radius: 5pt,"),
+      t({ "", "\t" }),
+      t("top-edge: \"ascender\","),
+      t({ "", "\t" }),
+      t("bottom-edge: \"descender\","),
+      t({ "", "" }),
+      t(")"),
+      t("["),
+      i(0, "important test"),
+      t("]")
     }
   ),
 }
