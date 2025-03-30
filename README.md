@@ -10,7 +10,7 @@ Use your plugin manager of choice, e.g.
 
 ```lua
   {
-      "abhi-xyz/typst-snippets",
+      "abhinandh-s/typst-snippets",
       config = function()
           require("snippets").setup()
       end
