@@ -25,6 +25,6 @@ jobs:
         uses: creyD/prettier_action@v4.3
         with:
           commit_message: "CI: format JSON files"
-          only_changed: true
+          only_changed: false # true
           # This part is also where you can pass other options, for example:
           prettier_options: --tab-width 2 --parser json --write **/*.json
