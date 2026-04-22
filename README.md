@@ -26,6 +26,25 @@ Use your plugin manager of choice, e.g.
 > }
 > ```
 
+### with native plugin manager (blink.cmp)
+
+```lua 
+vim.pack.add({
+  { src = 'https://github.com/L3MON4D3/LuaSnip', version = 'v2.5.0' },
+  'https://github.com/rafamadriz/friendly-snippets',
+  'https://github.com/abhinandh-s/typst-snippets',
+})
+
+require("luasnip.loaders.from_vscode").load()
+
+require('blink.cmp').setup({
+  snippets = { preset = 'luasnip' },
+  sources = {
+    default = { 'lsp', 'path', 'snippets', 'buffer' },
+  },
+})
+```
+
 ### With Packer
 
 ```lua

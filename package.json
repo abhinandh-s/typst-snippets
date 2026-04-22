@@ -6,20 +6,20 @@
   "contributes": {
     "snippets": [
       {
-        "language": ["typst"],
-        "path": "./snippets/typst/layout.json"
+        "language": "typst",
+        "path": "./snippets/layout.json"
       },
       {
-        "language": ["typst"],
-        "path": "./snippets/typst/visualize.json"
+        "language": "typst",
+        "path": "./snippets/visualize.json"
       },
       {
-        "language": ["typst"],
-        "path": "./snippets/typst/markup.json"
+        "language": "typst",
+        "path": "./snippets/markup.json"
       },
       {
-        "language": ["typst"],
-        "path": "./snippets/typst/maths.json"
+        "language": "typst",
+        "path": "./snippets/maths.json"
       }
     ]
   }
