@@ -1,12 +1,10 @@
 name: Format JSON files
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
+  pull_request:
   push:
-    branches: [ "master" ]
-
-  # Allows you to run this workflow manually from the Actions tab
+    branches:
+      - main
   workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -29,4 +27,4 @@ jobs:
           commit_message: "CI: format JSON files"
           only_changed: true
           # This part is also where you can pass other options, for example:
-          prettier_options: --tab-width 4 --parser json --write **/*.json
+          prettier_options: --tab-width 2 --parser json --write **/*.json
