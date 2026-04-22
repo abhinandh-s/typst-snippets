@@ -41,7 +41,7 @@ Plug "abhinandh-s/typst-snippets"
 ### With coc.nvim
 
 ```vim
-:CocInstall https://github.com/abhinandh-s/typst-snippets@master
+:CocInstall https://github.com/abhinandh-s/typst-snippets@main
 ```
 
 ## Usage
