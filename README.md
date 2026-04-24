@@ -74,4 +74,4 @@ loading vscode snippets. Like for example:
 
 ## Thanks to all contributors
 
-- [Nekketsu](https://github.com/Nekketsu) - [issue#1](https://github.com/abhinandh-s/typst-snippets/issues/1)
+- [Nekketsu](https://github.com/Nekketsu) - [issue #1](https://github.com/abhinandh-s/typst-snippets/issues/1)
