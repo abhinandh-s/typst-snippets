@@ -74,6 +74,4 @@ loading vscode snippets. Like for example:
 
 ## Thanks to all contributors
 
-<a href="https://github.com/abhinandh-s/typst-snippets/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=abhinandh-s/typst-snippets" />
-</a>
+- [Nekketsu](https://github.com/Nekketsu) - [issue#1](https://github.com/abhinandh-s/typst-snippets/issues/1)
