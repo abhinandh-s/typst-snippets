@@ -71,62 +71,112 @@
   },
   "Bullet list": {
     "prefix": ["list.b"],
-    "body": ["- ${0: item}"],
+    "body": [
+      "- ${1:item}",
+      "${0}"
+    ],
     "description": "add Bullet list"
   },
   "2 Bullet list": {
     "prefix": ["list.b.2"],
-    "body": ["- ${0: item}", "- ${1: item}"],
+    "body": [
+      "- ${1:item}",
+      "- ${2:item}",
+      "${0}"
+
+    ],
     "description": "add 2 Bullet list"
   },
   "3 Bullet list": {
     "prefix": ["list.b.3"],
-    "body": ["- ${0: item}", "- ${1: item}", "- ${2: item}"],
+    "body": [
+      "- ${1:item}",
+      "- ${2:item}",
+      "- ${3:item}",
+      "${0}"
+    ],
     "description": "add 3 Bullet list"
   },
   "4 Bullet list": {
     "prefix": ["list.b.4"],
-    "body": ["- ${0: item}", "- ${1: item}", "- ${2: item}", "- ${3: item}"],
+    "body": [
+      "- ${1:item}",
+      "- ${2:item}",
+      "- ${3:item}",
+      "- ${4:item}",
+      "${0}"
+    ],
     "description": "add 4 Bullet list"
   },
   "Numbered list": {
     "prefix": ["list.n"],
-    "body": ["+ ${0: item}"],
+    "body": [
+      "+ ${1:item}",
+      "${0}"
+
+    ],
     "description": "add Numbered list"
   },
   "2 Numbered list": {
     "prefix": ["list.n.2"],
-    "body": ["+ ${0: item}", "+ ${1: item}"],
+    "body": [
+      "+ ${1:item}",
+      "+ ${2:item}",
+      "${0}"
+    ],
     "description": "add 2 Numbered list"
   },
   "3 Numbered list": {
     "prefix": ["list.n.3"],
-    "body": ["+ ${0: item}", "+ ${1: item}", "+ ${2: item}"],
+    "body": [
+      "+ ${1:item}",
+      "+ ${2:item}",
+      "+ ${3:item}",
+      "${0}"
+    ],
     "description": "add 3 Numbered list"
   },
   "4 Numbered list": {
     "prefix": ["list.n.4"],
-    "body": ["+ ${0: item}", "+ ${1: item}", "+ ${2: item}", "+ ${3: item}"],
+    "body": [
+      "+ ${1:item}",
+      "+ ${2:item}",
+      "+ ${3:item}",
+      "+ ${4:item}",
+      "${0}"
+    ],
     "description": "add 4 Numbered list"
   },
   "Term list": {
     "prefix": ["term.list", "list.term"],
-    "body": ["/ Term: ${0: description}"],
+    "body": [
+      "/ Term: ${1:description}",
+      "${0}"
+    ],
     "description": "add Term list"
   },
   "Math": {
     "prefix": ["maths"],
-    "body": ["$${0:x^2}$"],
+    "body": [
+      "$${1:x^2}$",
+      "${0}"
+    ],
     "description": "maths block"
   },
   "Comment block": {
     "prefix": ["comment.b"],
-    "body": ["/* ${0:comment} */"],
+    "body": [
+      "/* ${1:comment} */",
+      "${0}"
+    ],
     "description": "Comment block"
   },
   "Comment line": {
     "prefix": ["comment.l"],
-    "body": ["// ${0:comment}"],
+    "body": [
+      "// ${1:comment}",
+      "${0}"
+    ],
     "description": "Comment line"
   }
 }

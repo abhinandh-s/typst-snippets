@@ -1,33 +1,50 @@
 {
   "align center": {
     "prefix": "align.c",
-    "body": ["#align(center)[", "   ${0:para}", "]"],
+    "body": [
+      "#align(center)[",
+      "   ${1:para}",
+      "]"
+    ],
     "description": "Align contents center."
   },
   "align right bottom": {
     "prefix": "align.r.b",
-    "body": ["#align(right + bottom)[", "   ${0:para}", "]"],
+    "body": [
+      "#align(right + bottom)[",
+      "   ${0:para}",
+      "]"
+    ],
     "description": "Align contents towards right bottom."
   },
   "block": {
     "prefix": "block",
     "body": [
       "#block(",
-      "   fill: luma(230),",
-      "   inset: 8pt,",
-      "   radius: 4pt,",
-      ")[${0:text}]"
+        "   fill: luma(230),",
+        "   inset: 8pt,",
+        "   radius: 4pt,",
+        ")[${0:text}]"
     ],
     "description": "A block-level container."
   },
   "box": {
     "prefix": "box",
-    "body": ["#box(", "  inset: 4pt,", ")[${0:text}]"],
+    "body": [
+      "#box(",
+        "  inset: 4pt,",
+        ")[${0:text}]"
+    ],
     "description": "An inline-level container that sizes content."
   },
   "pagebreak": {
     "prefix": "pagebreak",
-    "body": ["#pagebreak(", "  weak: false,", "  to: \"${0:odd}\",", ")"],
+    "body": [
+      "#pagebreak(",
+        "  weak: false,",
+        "  to: \"${0:odd}\",",
+        ")"
+    ],
     "description": [
       "A manual page break.",
       " ",
