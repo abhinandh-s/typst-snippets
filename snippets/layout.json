@@ -3,7 +3,7 @@
     "prefix": "align.c",
     "body": [
       "#align(center)[",
-      "   ${1:para}",
+      "\t${1:para}",
       "]"
     ],
     "description": "Align contents center."
@@ -12,7 +12,7 @@
     "prefix": "align.r.b",
     "body": [
       "#align(right + bottom)[",
-      "   ${0:para}",
+      "\t${0:para}",
       "]"
     ],
     "description": "Align contents towards right bottom."
@@ -21,9 +21,9 @@
     "prefix": "block",
     "body": [
       "#block(",
-        "   fill: luma(230),",
-        "   inset: 8pt,",
-        "   radius: 4pt,",
+        "\tfill: luma(230),",
+        "\tinset: 8pt,",
+        "\tradius: 4pt,",
         ")[${0:text}]"
     ],
     "description": "A block-level container."
@@ -32,7 +32,7 @@
     "prefix": "box",
     "body": [
       "#box(",
-        "  inset: 4pt,",
+        "\tinset: 4pt,",
         ")[${0:text}]"
     ],
     "description": "An inline-level container that sizes content."
@@ -41,8 +41,8 @@
     "prefix": "pagebreak",
     "body": [
       "#pagebreak(",
-        "  weak: false,",
-        "  to: \"${0:odd}\",",
+        "\tweak: false,",
+        "\tto: \"${0:odd}\",",
         ")"
     ],
     "description": [

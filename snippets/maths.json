@@ -3,10 +3,10 @@
     "prefix": ["cases", "maths.cases"],
     "body": [
       "$ f(x, y) := cases(",
-      "  1 \"if\" (x dot y)/2 <= 0,",
-      "  2 \"if\" x \"is even\",",
-      "  3 \"if\" x in NN,",
-      "  4 \"else\",",
+      "\t1 \"if\" (x dot y)/2 <= 0,",
+      "\t2 \"if\" x \"is even\",",
+      "\t3 \"if\" x in NN,",
+      "\t4 \"else\",",
       ") $"
     ],
     "description": [
